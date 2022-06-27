@@ -1,14 +1,14 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-const Contact = () => {
+const Tags = () => {
   return (
     <>
       <Layout>
-        <h2>contact page</h2>
+        <h2>tags page</h2>
       </Layout>
     </>
   )
 }
 
-export default Contact
+export default Tags
