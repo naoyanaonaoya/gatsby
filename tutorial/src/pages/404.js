@@ -5,7 +5,12 @@ const Error = () => {
   return (
     <>
       <Layout>
-        <h2>error page</h2>
+        <main className="error-page">
+          <section>
+            <h1>404</h1>
+            <h3>page not found</h3>
+          </section>
+        </main>
       </Layout>
     </>
   )
