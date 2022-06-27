@@ -6,18 +6,61 @@ const Images = () => {
   return (
     <>
       <Wrapper>
-        <StaticImage src="../assets/images/big.jpg" alt="food" />
-        <StaticImage src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1613583026/course%20slides/js-2_mo9uqy.png"></StaticImage>
-        <h2>gatsby images</h2>
+        <article>
+          <h4>constrained / default</h4>
+          <StaticImage
+            src="../assets/images/recipe-1.jpeg"
+            alt="food"
+            placeholder="tracedSVG"
+            layout="constrained"
+            className="example-img"
+            as="section"
+          ></StaticImage>
+        </article>
+        <article>
+          <h4>fixed</h4>
+          <StaticImage
+            src="../assets/images/recipe-1.jpeg"
+            alt="food"
+            placeholder="blurred"
+            layout="fixed"
+            width={200}
+            height={600}
+            className="example-img"
+            as="div"
+          ></StaticImage>
+        </article>
+        <article>
+          <h4>Full Width</h4>
+          <StaticImage
+            src="../assets/images/recipe-1.jpeg"
+            alt="food"
+            placeholder="dominantColor"
+            layout="fullWidth"
+            className="example-img"
+            as="article"
+          ></StaticImage>
+        </article>
       </Wrapper>
     </>
   )
 }
 
 const Wrapper = styled.section`
-  img {
-    width: 200px;
+  width: 70vh;
+  margin: 0 auto;
+  display: grid;
+  text-align: center;
+  gap: 2rem;
+  article {
+    border: 2px solid red;
   }
+  .example-img {
+    border-radius: 1rem;
+  }
+  /* @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  } */
 `
 
 export default Images
